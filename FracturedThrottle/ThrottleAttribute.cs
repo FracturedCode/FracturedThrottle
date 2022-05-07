@@ -14,8 +14,10 @@ namespace FracturedCode.FracturedThrottle
     }
     public enum RateTypeEnum
     {
+        Second,
         Minute,
         Hour,
-        Day
+        Day,
+        Week
     }
 }

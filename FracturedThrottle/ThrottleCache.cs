@@ -24,9 +24,12 @@ namespace FracturedCode.FracturedThrottle
                 || hits.Count(x => x >= DateTime.Now.Subtract(
                         settings.RateType switch
                         {
+                            RateTypeEnum.Second => TimeSpan.FromSeconds(1),
                             RateTypeEnum.Minute => TimeSpan.FromMinutes(1),
                             RateTypeEnum.Hour => TimeSpan.FromHours(1),
-                            _ => TimeSpan.FromDays(1)
+                            RateTypeEnum.Day => TimeSpan.FromDays(1),
+                            RateTypeEnum.Week => TimeSpan.FromDays(7),
+                            _ => throw new NotSupportedException()
                         })
                     ) < settings.Rate;
 
