@@ -3,7 +3,7 @@ FracturedThrottle is about giving the programmer an easy-to-implement, easy-to-u
 I didn't want to reinvent the wheel, but I couldn't find anything that worked quite the way I wanted, so I made my own.
 If you are looking for something with lots of features, very fine control and blazing fast speeds, this ain't it. This was designed to be simple, and in that simplicity is found reasonable performance.
 ## License
-This is shipping with [GPLv3 TODO](TODO). If you would like to use this in proprietary software, [contact me](https://fracturedcode.net/contact) and I'll sell you a license for a few bucks.
+This is shipping with [GPLv3](https://github.com/FracturedCode/FracturedThrottle/blob/master/LICENSE). If you would like to use this in proprietary software, [contact me](https://fracturedcode.net/contact) and I'll sell you a license for a few bucks.
 ## Usage
 There are two ways to use FracturedThrottle, and they can be used in tandem, even on the same controller actions.
 **You can view some examples in the "Examples" project**
@@ -57,7 +57,7 @@ public IActionResult ExampleAction(FormModel form) {
 ```
 Note that the `IThrottleCache` methods take an optional parameter `cacheModifier`, which is useful for maintaining multiple caches on one action for more advanced logic. This helps if you are using `IThrottleCache` in tandem with the attributes. Otherwise the piece of code above would work the same as if you weren't using `IThrottleCache`; `IThrottleCache` would be pulling from the same cache as `ThrottleMiddleware`.
 ## Installation
-You can grab [the Nuget package TODO]() or compile it yourself:
+You can grab [the Nuget package](https://www.nuget.org/packages/FracturedThrottle) or compile it yourself:
 ``` Bash
 dotnet build -c Release
 ```
