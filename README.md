@@ -43,7 +43,7 @@ public IActionResult ExampleAction(FormModel form) {
     const string separateCache = "SuccessCache";
     Throttle successThrottle = new() { Rate = 1, RateType = RateTypeEnum.Day }
     
-    if (RateCache.AllowConnection(separateCache)) {
+    if (RateCache.AllowConnection(successThrottle, separateCache)) {
         if (ModelState.IsValid) {
             form.Process();
             RateCache.CacheConnection(separateCache);
