@@ -1,7 +1,12 @@
+using FracturedCode.FracturedThrottle;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddMemoryCache();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IThrottleCache, ThrottleCache>();
 
 var app = builder.Build();
 
@@ -23,5 +28,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseMiddleware<ThrottleMiddleware>();
 
 app.Run();

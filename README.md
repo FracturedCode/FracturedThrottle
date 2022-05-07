@@ -5,8 +5,9 @@ If you are looking for something with lots of features, very fine control and bl
 ## License
 This is shipping with [GPLv3](https://github.com/FracturedCode/FracturedThrottle/blob/master/LICENSE). If you would like to use this in proprietary software, [contact me](https://fracturedcode.net/contact) and I'll sell you a license for a few bucks.
 ## Usage
-There are two ways to use FracturedThrottle, and they can be used in tandem, even on the same controller actions.
 **You can view some examples in the "Examples" project**
+
+There are two ways to use FracturedThrottle, and they can be used in tandem, even on the same controller actions.
 The first method is the classic Attribute-based configuration pattern that uses middleware to achieve the functionality. You can stack as many Throttle attributes as you want on your action. This helps in scenarios where you might want to allow bursts, but don't want to allow a sustained load at those speeds.
 Configure the necessary services and enable the middleware in your `Program.cs` or `Startup.cs`:
 ``` C#

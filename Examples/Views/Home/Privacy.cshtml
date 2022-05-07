@@ -3,4 +3,7 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>You can only use this page 10x/minute. Refresh 10x to test that.</p>
+<p>If you click this button, it signals the last time for one minute you will be allowed on this page.</p>
+<p>Why doesn't the blockme button just immediately block you? The scenario this was designed for was something like a successful form submittal. In which case you would still want the client to receive some sort of "success" page, but then not be allowed to submit after. You can use two separate methods for Get and Post so that they don't get an error page unless they try to submit another form.</p>
+<a href="?blockMe=true" class="btn btn-primary">Block Me</a>
