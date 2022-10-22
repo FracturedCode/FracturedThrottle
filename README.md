@@ -1,4 +1,8 @@
 # FracturedThrottle
+
+## This project is depracated!
+Please use the [new rate limiting middleware](https://learn.microsoft.com/en-us/aspnet/core/performance/rate-limit) `Microsoft.AspNetCore.RateLimiting` introduced in .NET 7. It has the sliding window functionality I was looking for with this package.
+
 FracturedThrottle is about giving the programmer an easy-to-implement, easy-to-understand IP-based rate limiting library with a low footprint. It has only 3 classes, and the dependencies are probably already included in your ASP.NET project.
 I didn't want to reinvent the wheel, but I couldn't find anything that worked quite the way I wanted, so I made my own.
 If you are looking for something with lots of features, very fine control and blazing fast speeds, this ain't it. This was designed to be simple, and in that simplicity is found reasonable performance.
